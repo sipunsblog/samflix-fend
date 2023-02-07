@@ -103,7 +103,7 @@ function Streampage(props){
                 <section className="bannerComp">
                     <div className="bannerWrapeer">
                         <div className="closePlayer" >
-                            <i onClick={()=>{ closePlayer() }} className="fa-solid fa-circle-xmark"></i>
+                            <i onClick={()=>{ closePlayer() }} className="fa-solid fa-circle-xmark">❌</i>
                         </div>
                         <video ref={vdo}  controls className="videoPlayer" autoPlay={true} >
                             <source src={`http://localhost:8000/movies/stream/play/${movieID.id}`} />
