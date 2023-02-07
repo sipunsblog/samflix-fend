@@ -56,7 +56,7 @@ function Bar(){
                         <input type="text" onKeyUp={(event)=>searchMovies(event.target.value)} onBlur={()=>{ checkArr? setShowOrNot(true): setShowOrNot(false)}} /><i className="fa-solid fa-magnifying-glass"></i>
                     </div>
                     <div className="user-icon">
-                        <i onClick={()=>{ logout ? setLogout(false) : setLogout(true) }} className="fa-solid fa-face-smile"></i>
+                        <i onClick={()=>{ logout ? setLogout(false) : setLogout(true) }} className="setting">⚙️</i>
                     </div>
                     { logout ? 
                         (
