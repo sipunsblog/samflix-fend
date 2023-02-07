@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.registration-bg{
+    position: relative;
+}
+#background{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+.register-overlaay{
+    height: 100vh;
+    width: 100%;
+    position: absolute; 
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.register{
+    width: 20%;
+    height: auto;
+    border-radius: 10px;
+    background-color: #192128;
+    /* margin-left: 100px; */
+    color: white;
+    padding: 20px 25px;
+}
+.register h3{
+    color: #d0d00e;
+}
+.register input{
+    width: 90%;
+    margin-top: 2px;
+}
+.form-group{
+    margin-top: 5px;
+}
+.register-btn{
+    padding: 7px 10px;
+    border: solid .1px black;
+    background-color: #bf2a2a;
+    border-radius: 5px;
+    margin-top: 30px ;
+    margin-left: 33%;
+    color: white;
+    
+}
+.registration-text{
+    color: white;
+}
+.registration-text >h2{
+    font-family: 'Bebas Neue', cursive;
+}
+@media screen and (max-width:769px) {
+    .register-overlaay{
+        flex-direction: column;
+    }
+    
+    .registration-text{
+        width: 100px;
+        /* margin-left: -53px; */
+    }
+    .registration-text >h1{
+        margin-bottom: 0px;
+        font-size: 15px;
+    }
+    .registration-text >span{
+        font-size: 12px;
+    }
+    .loginExtra{
+        width: 180px;
+        margin-left: 0px !important;
+        height: auto !important;
+    }
+    .register-btn{
+        margin-left: 25%;
+    }
+    .register{
+        width: 53%;
+        height: auto !important;
+    }
+    #background{
+        object-fit: cover;
+    }
+}
+
+/* login start */
+.loginExtra{
+    height: auto ;
+    margin-left: -100px;
+}
+/* login end */

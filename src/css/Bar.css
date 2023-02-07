@@ -1,0 +1,118 @@
+/* header Section */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+.headerBar{
+    height: 7vh;
+    background-color: #1c1a1a;
+    color: rgb(236 32 23);
+    display: flex;
+    justify-content: space-between;
+    padding: 9px 8%;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+.headerBar h2{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 700;
+    color: rgb(236 32 23);
+
+}
+.headerBar>a{
+    text-decoration: none;
+}
+.headerAction{
+    display: flex;
+    height: 35px;
+    position: relative;
+
+}
+.search-action{
+    /* background-color: rgb(255, 255, 255); */
+    position: relative;
+    width: 200px;
+    right: 50px;
+    top: 4px;
+}
+.search-action >input {
+    border: none ;
+    padding: 4.8px 10px;
+    position: absolute;
+    border-radius: 3px;
+
+}
+.search-action >i {
+    margin-right: 5px;
+    position: absolute;
+    left: 180px;
+    top: 6px;
+    z-index: 3;
+    cursor: pointer;
+}
+.user-icon{
+    background-color: rgb(86 49 47);
+    padding: 7px;
+    border-radius:10%;
+    height: 40px;
+}
+.user-icon>i{
+    line-height: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    
+}
+.logout{
+    background-color: rgb(86 49 47);
+    position: absolute;
+    top: 40px;
+    right: -30px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    text-align: center;
+}
+.logout >span{
+    color: aqua;
+    cursor: pointer;
+}
+@media screen and (max-width: 1100px){
+    .headerBar{
+        height: 9vh;
+    }
+}
+@media screen and (max-width:769px) {
+    .search-action{
+        width: 100px;
+        right: 10px;
+        top: 0;
+    }
+    .search-action > input {
+        width: 100%;   
+    }
+    .search-action >i {
+        left: 80px;
+        top: 8px;
+    }
+    .user-icon{
+        height: 30px;
+        padding: 4px;
+    }
+    .user-icon>i{
+        font-size: 20px;
+        margin-top: -1px;
+    }
+}
+/* end header */
+/* search results */
+.headerParent{
+    position: fixed;
+    z-index: 10;
+}
+.searchRes{
+    height: 70vh;
+    padding: 0px;
+    width: 100%;
+    background-color: #2f2f3df5;
+    position: fixed;
+    z-index: 100;
+    top: 7vh;
+}

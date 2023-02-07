@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+.moviesList{
+    width: 108%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding: 3px 4%;
+    color: white;
+    justify-content: center;
+    align-items: flex-start;
+}
+.moviesList>h2{   
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+.moviesList:nth-child(odd){
+    background-color: #1c1a1a;
+}
+.moviesList:nth-child(even){
+    background-color: rgb(56 49 49);
+}
+
+.allMovies{
+    width: 100%;
+    height: 200px;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: row;
+}
+.eachMovie{
+    width: 15%;
+    height: 200px;
+    margin-left: 20px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.eachMovie>img{
+    width: 100%;
+    position: absolute;
+    
+}
+.no-margin{
+    margin-left: 0px;
+}
+.movie-overlay{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.movie_details{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0,0,0,0.5);
+    font-family: 'Bebas Neue', cursive;
+    padding: 5px 10px;
+}
+.movie-title{
+    font-size: 25px;
+}
+.movie-action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+.movie-action button{
+    background-color: #d0d00e;
+    padding: 3px 5px;
+    border-radius: 5px;
+    border: solid .1px rgba(0,0,0,0.5);
+}
+.star{
+    font-size: 14px;
+}
