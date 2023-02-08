@@ -15,7 +15,7 @@ function Bar(){
 
     function searchMovies(val){
         let mySamflixToken =JSON.parse(localStorage.getItem("samflixTokenId")).token;
-        fetch(`http://localhost:8000/movies/search/${val}`,{
+        fetch(`https://famous-panama-hat-worm.cyclic.app/movies/search/${val}`,{
             headers:{
                 "Authorization":`Bearer ${mySamflixToken}`
             }

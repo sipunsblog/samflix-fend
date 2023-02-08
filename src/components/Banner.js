@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 
 function Banner(props){
     // function userMovieModelCheck(){
-    //     fetch("http://localhost:8000/movies/movieplayed/",{
+    //     fetch("https://famous-panama-hat-worm.cyclic.app/movies/movieplayed/",{
     //         method:"POST",
     //         "Content-Type":"application/json",
     //     })

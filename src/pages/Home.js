@@ -11,7 +11,7 @@ function Home(){
     useEffect(()=>{
         let mySamflixToken =JSON.parse(localStorage.getItem("samflixTokenId"));
 
-        fetch("http://localhost:8000/movies/",{
+        fetch("https://famous-panama-hat-worm.cyclic.app/movies/",{
             headers:{
                 "Authorization":`Bearer ${mySamflixToken.token}`
             }

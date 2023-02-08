@@ -14,7 +14,7 @@ function Register(){
     }
    async function registerUser(){
         if(Object.keys(register).length===4){
-            let xx = await fetch("http://localhost:8000/users/",{
+            let xx = await fetch("https://famous-panama-hat-worm.cyclic.app/users/",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"

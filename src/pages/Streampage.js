@@ -16,7 +16,7 @@ function Streampage(props){
     let vdo = useRef();
     function setCloseTimePlayer(){
         let bodyDta = JSON.stringify({watched:vdo.current?.currentTime});
-        fetch(`http://localhost:8000/movies/stream/close/${closedvdo}`,{
+        fetch(`https://famous-panama-hat-worm.cyclic.app/movies/stream/close/${closedvdo}`,{
             method:"PUT",
             headers:{
                 "Authorization":`Bearer ${mySamflixToken.token}`,
@@ -34,7 +34,7 @@ function Streampage(props){
     useEffect(()=>{
 
 
-        fetch(`http://localhost:8000/movies/${movieID.id}`,{
+        fetch(`https://famous-panama-hat-worm.cyclic.app/movies/${movieID.id}`,{
         headers:{
             "Authorization":`Bearer ${mySamflixToken.token}`
         }
@@ -63,7 +63,7 @@ function Streampage(props){
             userID:mySamflixToken.userID,
             movieID:movieID.id
         }
-        fetch("http://localhost:8000/movies/movieplayed/",{
+        fetch("https://famous-panama-hat-worm.cyclic.app/movies/movieplayed/",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json",
@@ -106,7 +106,7 @@ function Streampage(props){
                             <i onClick={()=>{ closePlayer() }} className="fa-solid fa-circle-xmark">❌</i>
                         </div>
                         <video ref={vdo}  controls className="videoPlayer" autoPlay={true} >
-                            <source src={`http://localhost:8000/movies/stream/play/${movieID.id}`} />
+                            <source src={`https://famous-panama-hat-worm.cyclic.app/movies/stream/play/${movieID.id}`} />
                         </video>
                     </div>
                 </section>
