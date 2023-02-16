@@ -16,7 +16,7 @@ function ForgetPw(){
         loginUserObj[property] = val;
     }
     function loginRequest(){
-        fetch("http://localhost:8000/users/sendOtp",{
+        fetch("https://famous-panama-hat-worm.cyclic.app/users/sendOtp",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

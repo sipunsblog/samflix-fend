@@ -16,7 +16,7 @@ function ResetPw(){
         loginUserObj[property] = val;
     }
     function loginRequest(){
-        fetch("http://localhost:8000/users/updateUser",{
+        fetch("https://famous-panama-hat-worm.cyclic.app/users/updateUser",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"

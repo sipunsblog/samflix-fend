@@ -15,7 +15,7 @@ function Login(){
         loginUserObj[property] = val;
     }
     function loginRequest(){
-        fetch("http://localhost:8000/users/logIN",{
+        fetch("https://famous-panama-hat-worm.cyclic.app/users/logIN",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
