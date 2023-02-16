@@ -5,7 +5,8 @@ import Message from "../components/Message";
 import { useState } from "react";
 const banner = require("../images/loginRegBanner.png");
 
-function Login(){
+
+function ResetPw(){
     let myform = useRef();
     let loginUserObj = {};
     let navigateToLocation = useNavigate();
@@ -15,7 +16,7 @@ function Login(){
         loginUserObj[property] = val;
     }
     function loginRequest(){
-        fetch("http://localhost:8000/users/logIN",{
+        fetch("http://localhost:8000/users/updateUser",{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -25,15 +26,12 @@ function Login(){
         .then(data=>data.json())
         .then(loginRes=>{
             if(loginRes.status===200){
-                let userTokenID = JSON.stringify({userID:loginRes.userid,token:loginRes.token});
-                localStorage.setItem("samflixTokenId",userTokenID);
                 setMessage(true);
-                setMessageVal({status:200,message:"Login Sucessfull"});
+                setMessageVal({status:200,message:"Password reset Successfully"});
             }else{
                 setMessage(true);
-                localStorage.setItem("samflixTokenId","");
                 myform.current.reset();
-                setMessageVal({status:204,message:"Id and password doesnot match"})
+                setMessageVal({status:204,message:"Phone number not found"})
 
             }
             
@@ -48,7 +46,7 @@ function Login(){
         setTimeout(()=>{
             setMessage(false);
             if(messageval.status===200 ){
-                navigateToLocation("/home");
+                navigateToLocation("/login");
             }
         },x)
     }
@@ -74,21 +72,24 @@ function Login(){
                 </div>
                 <div className="register loginExtra">
                     <div>
-                        <h3>Login Form</h3>
+                        <h3>Reset Password Form</h3>
                     </div>
                     <div className="registration_action">
                         <form ref={myform}>
                             <div className="form-group">
-                                <label htmlFor="emailid">Email Id/ Phone Number</label>
-                                <input type="email" className="form-control" id="emailid" onChange={(event)=>{ putDynamicValue("emailID",event.target.value); }}  placeholder="Enter Your emailid" />
+                                <label htmlFor="phone">Phone Number</label>
+                                <input type="phone" className="form-control" id="phone" onChange={(event)=>{ putDynamicValue("phone",event.target.value); }}  placeholder="Enter Your phone number" />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="password">Password</label>
-                                <input type="password" className="form-control" id="password" onChange={(event)=>{ putDynamicValue("password",event.target.value); }}  placeholder="Enter Your password" />
+                                <label htmlFor="password">New Password</label>
+                                <input type="password" className="form-control" id="password" onChange={(event)=>{ putDynamicValue("password",event.target.value); }}  placeholder="Enter Password" />
                             </div>
-                            <button  type="button" onClick={()=>{ loginRequest() }} className="register-btn">Login</button>
-                           <p> Create one <Link to="/register"> Register </Link> !!</p>
-                           <p> Forget Password <Link to="/forgetPW"> Reset Password </Link> !!</p>
+                            <div className="form-group">
+                                <label htmlFor="otp">OTP</label>
+                                <input type="otp" className="form-control" id="otp" onChange={(event)=>{ putDynamicValue("otp",event.target.value); }}  placeholder="Enter Otp" />
+                            </div>
+                            <button  type="button" onClick={()=>{ loginRequest() }} className="register-btn">Reset</button>
+                           <p> Already exist! <Link to="/login"> Login </Link> !!</p>
                         </form>
                     </div>
                 </div>
@@ -98,4 +99,4 @@ function Login(){
     )
 }
 
-export default Login;
+export default ResetPw;

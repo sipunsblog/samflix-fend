@@ -13,8 +13,8 @@ function Register(){
         register[property] = value;
     }
    async function registerUser(){
-        if(Object.keys(register).length===4){
-            let xx = await fetch("https://famous-panama-hat-worm.cyclic.app/users/",{
+        if(Object.keys(register).length===5){
+            let xx = await fetch("http://localhost:8000/users/",{
                 method:"POST",
                 headers:{
                     "Content-Type":"application/json"
@@ -81,6 +81,10 @@ function Register(){
                             <div className="form-group">
                                 <label htmlFor="emailid">Email Id</label>
                                 <input type="email" required className="form-control" id="emailid" onChange={(event)=>{ putDynamicValue("emailID",event.target.value); }}  placeholder="Enter Your emailid" />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="phone">Phone Number</label>
+                                <input type="email" required className="form-control" id="phone" onChange={(event)=>{ putDynamicValue("phone",event.target.value); }}  placeholder="Enter Your phone number" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="password">Password</label>
